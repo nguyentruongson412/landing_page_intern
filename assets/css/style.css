@@ -2,14 +2,345 @@
     box-sizing: border-box;
 }
 
+:root {
+    --padding-navbar: 10px;
+}
 html {
     font-size: 62.5%;
 }
 
+
 body {
     font-size: 1.6rem;
-    font-family: 'Sora', sans-serif;
+    background: #131517;
 }
 
+/* ============== Comon ================== */
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: min(1144px, 100% - 40px);
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-weight: 700;
+    color: #F9F9F9;
+}
+
+.heading-lv1 {
+    font-size: 6rem;
+    line-height: 1.17;
+}
+
+.heading-lv2 {
+    font-size: 4rem;
+    line-height: 1.25;
+}
+
+.section-desc {
+    font-weight: 400;
+    color: #858B93;
+}
+
+.desc-lv1 {    
+    font-size: 1.6rem;
+    line-height: 1.62;
+    /* or 162% */
+}
+
+.desc-lv2 {
+    font-size: 1.4rem;
+    line-height: 1.71;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 199px;
+    height: 54px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.62;
+    color: #F9F9F9;
+    background: linear-gradient(90deg, #EB9204 -33.14%, #83E868 116.38%);
+}
+
+/*================= Header ================ */
+
+.header {
+    font-family: 'Sora', sans-serif;
+    padding: 2.5em;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: inline-block;
+    width: 87px;
+    height: 19px;
+    object-fit: cover;
+}
+
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.header-nav__link {
+    padding: var(--padding-navbar);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #858B93;
+}
+
+.header-nav__active {
+    position: relative;
+    color: #F9F9F9;
+}
+
+.header-nav__active::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 21px;
+    height: 3px;
+    background: #6AEA5C;
+}
+
+.header-nav__link {
+    position: relative;
+    transition: 0.5s transform;
+}
+
+.header-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: calc(100% - var(--padding-navbar));
+    height: 3px;
+    border-radius: 40px;
+    transform: scaleX(0);
+    background-color: #6AEA5C;
+    transform-origin: right;
+    transition: 0.5s transform;
+}
+
+.header-nav__link:hover {
+    color: #fff;
+}
+
+.header-nav__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: 0.5s transform;
+}
+
+.header-action {
+    padding: 8px 26px;
+    border: 1px solid #272633;
+    border-radius: 8px;
+    background: #131517;
+}
+
+.header-action__link {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: linear-gradient(90deg, #EB9204 -33.14%, #83E868 116.38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-action:hover {
+    color: #000;
+    background: #858B93;
+}
+
+/* =============== Hero ================ */
+
+.hero {
+    font-family: 'Sora', sans-serif;
+    margin-top: 157px;
+}
+
+.hero-top {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-top__deco-left, 
+.hero-top__deco-right {
+    position: absolute;
+    top: -58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-top__deco-left {
+    left: 28px;
+}
+
+.hero-top__deco-right {
+    right: 28px;
+}
+
+.hero-top__deco__1,
+.hero-top__deco__2,
+.hero-top__deco__3,
+.hero-top__deco__4{
+    display: inline-block;
+    border-radius: 50%;
+    background: linear-gradient(179.83deg, #111118 6.06%, rgba(43, 43, 61, 0) 119.38%);
+    box-shadow: inset 0px 39px 31px #313141;
+}
+
+.hero-top__deco__1 {
+    width: 121px;
+    height: 121px;
+}
+
+.hero-top__deco__2 {
+    width: 39px;
+    height: 39px;
+    margin-top: 41px;
+}
+
+.hero-top__deco__3 {
+    width: 25px;
+    height: 25px;
+    margin-top: 36px;
+}
+
+.hero-top__deco__4 {
+    width: 14px;
+    height: 14px;
+    margin-top: 39px;
+}
+
+.hero-top__heading {
+    position: relative;
+    width: 783px;
+    text-align: center;
+}
+
+.hero-top__heading__color-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    border: 1px dashed #FFFFFF;
+    background: #20262D;
+}
+
+.hero-top__heading-deco {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 9px;
+    background: #AE8FF9;
+    border-radius: 4.5px 4.5px 4.5px 0px;
+}
+
+.hero-top__heading-deco:first-child {
+    top: -10px;
+    left: -11px;
+    transform: matrix(-1, 0.01, 0.01, 1, 0, 0);
+}
+
+.hero-top__heading-deco:nth-child(2) {
+    top: -10px;
+    right:-11px;
+    background: #EF8F00;
+}
+
+.hero-top__heading-deco:nth-child(3) {
+    bottom: -10px;
+    left: -11px;
+    background: #FF7667;
+    border-radius: 4.5px 4.5px 4.5px 0px;
+    transform: rotate(180deg);
+}
+
+.hero-top__heading-deco:nth-child(4) {
+    right: -11px;
+    bottom: -10px;
+    background: #0CCE84;
+    border-radius: 4.5px 4.5px 4.5px 0px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.hero-top__heading::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 53px;
+    bottom: 6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FF7667;
+    box-shadow: inset 0px 7px 6px rgba(0, 0, 0, 0.25);
+}
+
+.hero-top__desc {
+    display: inline-block;
+    width: 447px;
+    margin: 34px 0 44px;
+    text-align: center;
+}
+
+.hero-top__action {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.hero-top__btn-right {
+    margin-left: 20px;
+    background: #282C30;
+    box-shadow: 1px 8px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero__img {
+    position: relative;
+    width: 848px;
+    height: 366px;
+    margin: 111px auto 0;
+}
+
+.hero__img-main {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__img-sub-main {
+    position: absolute;
+    bottom: -146px;
+    left: -75px;
+    display: inline-block;
+    width: 216px;
+    height: 355px;
+}
 
 
