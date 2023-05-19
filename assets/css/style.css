@@ -11,6 +11,7 @@ html {
 
 
 body {
+    font-family: 'Sora', sans-serif;
     font-size: 1.6rem;
     background: #131517;
 }
@@ -74,7 +75,6 @@ a {
 /*================= Header ================ */
 
 .header {
-    font-family: 'Sora', sans-serif;
     padding: 2.5em;
 }
 
@@ -341,6 +341,99 @@ a {
     display: inline-block;
     width: 216px;
     height: 355px;
+}
+
+.hero__img::after {
+    content: '';
+    position: absolute;
+    bottom: -73px;
+    left: -121px;
+    z-index: -1;
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    background: linear-gradient(179.83deg, #111118 6.06%, rgba(43, 43, 61, 0) 119.38%);
+    box-shadow: inset 0px 39px 31px #313141;
+}
+
+.hero__img::before {
+    content:'';
+    position: absolute;
+    right: -66px;
+    bottom: 54px;
+    z-index: -1;
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    background: linear-gradient(183.21deg, #8AE764 1.17%, #E99506 115.87%);
+    box-shadow: inset 0px 39px 31px #113719;
+}
+
+
+.service {
+    border-radius: 27px;
+    margin-top: 286px;
+    background: #282C30;
+}
+
+.service__list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 71px 50px 53px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-item__img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #0CCE84;
+}
+
+.service-item:nth-child(2) .service-item__img-wrap {
+    background: #EF8F00;
+}
+
+.service-item:last-of-type .service-item__img-wrap {
+    background: #AE8FF9;
+}
+
+.service-item__heading {
+    margin: 30px 0 5px;
+    font-size: 2.2rem;
+    line-height: 1.45;
+}
+
+.service-item__desc {
+    display: inline-block;
+    width: 239px;
+}
+
+.service__line-1 {
+    position: absolute;
+    width: 194.5px;
+    left: 237px;
+    top: 102px;
+    border: 1px dashed #858B93;
+}
+
+.service__line-2 {
+    position: absolute;
+    width: 194.5px;
+    right: 237px;
+    top: 102px;
+    border: 1px dashed #858B93;
 }
 
 
